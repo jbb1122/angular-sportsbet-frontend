@@ -1,0 +1,8 @@
+.mc-top ul {width:100%; margin:0px; text-align:left;}
+.mc-top ul li { padding:10px 0px; text-align: center; background:#292929;}
+.mc-top ul li a {width:100%; display:inline-block}
+.mc-top ul li a .icon {width:100%; height: auto; margin-bottom:5px;}
+.mc-top ul li a img {height:30px;}
+.mc-top ul li:last-child a img {height:15px; margin:7.5px 0px;}
+.mc-top ul li a {color:#fff;}
+.mc-top ul li a label {width:100%; cursor:pointer; font-weight:600; font-size:11px;}

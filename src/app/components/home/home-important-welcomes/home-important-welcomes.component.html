@@ -1,0 +1,23 @@
+<div class="mc-content">
+    <div class="content-title">ÖNEMLİ KARŞILAMALAR</div>
+    <div class="mc-table">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" *ngFor="let sport of sports;let index = index">
+                <a class="nav-link {{index == 0 ? 'active' : ''}}" data-toggle="tab" href="#{{sport.type}}" (click)="getHightLightEvents(sport.id)">
+                    <img src="./assets/img/icons/{{sport.type}}.svg"/> {{sport.name}}
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div *ngFor="let sport of sports; let index = index" class="tab-pane fade show {{index == 0 ? 'active' : ''}}" id="{{sport.type}}">
+                <app-market-bar (changeMarketOrder)="onChangeMarketOrder($event)" [markets]="markets"></app-market-bar>
+                <div class="row table-content">
+                    <app-bet-item *ngFor="let evt of allHighlightEvents" [betEvent]="evt" [markets]="markets"></app-bet-item>
+                    <button *ngIf="allHighlightEvents.length == 10" class="btn btn-activity">
+                        ETKİNLİKLERİN TÜMÜNÜ GÖRÜNTÜLEYİN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

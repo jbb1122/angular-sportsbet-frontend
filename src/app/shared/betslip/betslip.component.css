@@ -1,0 +1,82 @@
+.betslip {
+    color: #afafaf;
+    background: #292929;
+}
+
+.betslip h4 {
+    color:#fff;
+    width:100%;
+    text-align:center;
+    font-size:16px;
+    padding:10px;
+    border-bottom:2px solid #a6211c;
+    position:relative;
+}
+.betslip h4 .bet-badge {
+    position: absolute;
+    background:#a6211c;
+    font-size:13px;
+    border-radius:100%;
+    text-align:center;
+    width:25px; height:25px; line-height:25px;font-weight:normal; margin:0px; margin-left:5px;
+    margin-top:-2px;
+}
+
+.betslip  .nav-item {text-align:left; font-weight:600;}
+.betslip  .nav-item img {height:15px; vertical-align:top; margin-top:3px; margin-right:1px;}
+.betslip  .nav-item .nav-link {color:#fff; font-weight:600; }
+.betslip  .nav-tabs .nav-link::before {background-color: #af3834;}
+.betslip  .nav-item .nav-link.active {color: #af3834;}
+.betslip  .nav-tabs .nav-link.active,
+.betslip  .nav-tabs .nav-link {color: #fff; width:50%; text-align:center;}
+.betslip-content .item {background:#ffffff; border-bottom:1px solid #afafaf}
+.betslip-content .item .live {width:50px; float:left; text-align:center;}
+.betslip-content .item .description {display: flex;}
+.betslip-content .item .market_type {text-align: right;}
+.allow_change_speed_wrapper {padding-top: 5px;padding-bottom: 5px;}
+.allow_change_speed_wrapper label{margin-left: 10px;color: #fff;}
+
+.betslip-content .item .live label {
+    text-transform: uppercase;
+    color: white;
+    background: #e0000f;
+    font-size: 11px;
+    border-radius: 2px;
+    padding: 1px 5px 0 5px;
+    line-height: 15px;
+    font-weight: 600;
+    height: 16px;
+    cursor: pointer;
+}
+.betslip-content .item .name {width:200px; float:left; color:#000000; font-size:14px; font-weight:bold; padding-top:2.5px;}
+.betslip-content .item .close {width:50px; float:left;   text-align:right; padding-right:10px; font-weight:normal;}
+.betslip-content .item .combined-close {width:21px; float:left;   text-align:right; padding-right:5px; font-weight:normal;}
+.betslip-content .item .combined-close a { color:#b9b9b9; font-size:14px; font-weight:bold;  }
+.betslip-content .item .close a { color:#b9b9b9; font-size:14px; font-weight:bold;  }
+.betslip-content .item .fight { color:#000000; font-size:14px; font-weight:normal; padding-left:5px;  }
+.betslip-content .item .selection {width:50%; float:left; padding-left:7.5px; font-weight:bold; color:#000; font-size:12px;}
+.betslip-content .item .slip-rate {width:50%; float:left; text-align:right; padding-right:5px; font-weight:600; font-size:12px; color:#000; }
+.betslip-footer .clear-all { text-align: right;}
+.betslip-footer .clear-all a {color:#fff; display: inline-block; padding:10px; font-size:14px; font-weight: 600;cursor: pointer;}
+.betslip-footer .clear-all a i {margin-left:5px;}
+.betslip-footer .rate-table {color:#fff;}
+.betslip-footer .rate-table input {width:60px; float: right; line-height:0px; margin-left:5px;}
+.betslip-footer .rate-table .item {margin:0px; margin-bottom:5px; line-height:30px;}
+.betslip-footer .rate-table .item .col-6:last-child {text-align:right; font-size:14px; font-weight:bold;}
+.betslip-footer .footer-button {padding:5px;}
+
+.betslip .nav-tabs .nav-link.active, .betslip .nav-tabs .nav-link {
+    background: transparent;
+    border:none;
+}
+
+@media (max-width:768px) {
+    .betslip-content .item .name {
+        width: calc(100% - 100px);
+    }
+    #combined .betslip-content .item .name {
+        width: calc(100% - 79px);
+    }
+    .betslip-content .col-md-1 {width:7.5%;}
+    .betslip-content .col-md-11 {width:92.5%;}
+}

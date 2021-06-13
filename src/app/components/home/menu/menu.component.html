@@ -1,0 +1,28 @@
+<div class="mc-top">
+    <ul class="row">
+        <li class="col">
+            <a [routerLink]="['/live']">
+                <div class="icon">
+                    <img src="./assets/img/live.png"/>
+                </div>
+                <label>LIVE</label>
+            </a>
+        </li>
+        <li *ngFor="let topSportMenu of topSportMenus" class="col">
+            <a [routerLink]="['/sport/', topSportMenu.id]">
+                <div class="icon">
+                    <img src="./assets/img/icons/{{topSportMenu.type}}.svg"/>
+                </div>
+                <label>{{topSportMenu.name}}</label>
+            </a>
+        </li>
+        <li class="col">
+            <a [routerLink]="['/all-sports']">
+                <div class="icon">
+                    <img src="./assets/img/a-z.png"/>
+                </div>
+                <label>TÜM SPORLAR</label>
+            </a>
+        </li>
+    </ul>
+</div>

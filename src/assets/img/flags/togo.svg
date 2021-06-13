@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 126 126" enable-background="new 0 0 126 126" xml:space="preserve">
+<g>
+	<g>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#00840F" d="M13,96.3h100V83H13V96.3L13,96.3z M113,69.7V56.3H53v13.3H113
+			L113,69.7z M113,43V29.7H53V43H113L113,43z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFD80F" d="M13,83h100V69.7H13V83L13,83z M53,56.3h60V43H53V56.3L53,56.3z"
+			/>
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FF1612" points="13,69.7 53,69.7 53,29.7 13,29.7 13,69.7 		"/>
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="33,37 35.8,45.8 45,45.8 37.6,51.2 40.4,59.9 33,54.5 
+			25.6,59.9 28.4,51.2 21,45.8 30.2,45.8 33,37 		"/>
+	</g>
+	<path opacity="0.35" fill="#FFFFFF" d="M13,29.7v25.5C26.2,62.6,43.7,67,63,67c19.3,0,36.8-4.5,50-11.8V29.7H13z"/>
+</g>
+</svg>

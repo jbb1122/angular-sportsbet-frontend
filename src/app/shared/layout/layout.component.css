@@ -1,0 +1,86 @@
+.main {
+    padding:0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+.main .main-left {
+    margin-right: 16px;
+    width: 300px;
+    min-width: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+}
+.main .main-center {
+    min-width: 0%;
+    width: 61%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+}
+.main .main-right {
+    margin-left: 16px;
+    min-width: 300px;
+    width: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+}
+
+.main .main-right {
+    margin-left: 16px;
+    min-width: 300px;
+    width: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+}
+
+@media (max-width:768px) {
+    .main .main-left {width:100%; display: block}
+    .main .main-center {width:100%; display: block}
+    .main .main-right {width:100%; display: block; margin:0px; min-width:100%;}
+    .main {display: block}
+    .main .mc-top {overflow: scroll;}
+    .main .mc-top ul {
+        margin: 0px;
+        text-align: left;
+        width: 1000px;
+        overflow-y: scroll;
+    }
+}

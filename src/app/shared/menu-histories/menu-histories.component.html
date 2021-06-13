@@ -1,0 +1,10 @@
+<div class="detail-breadcrumb">
+    <ul>
+        <li class="back"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+        <li *ngFor="let history of histories;let ind = index">
+            <a *ngIf="histories.length - 1 > ind" [routerLink]="[history.link]">{{history.text}}</a> 
+            <a *ngIf="histories.length - 1 == ind">{{history.text}}</a> 
+            <i *ngIf="ind < histories.length - 1" class="fas fa-caret-right"></i>
+        </li>
+    </ul>
+</div>

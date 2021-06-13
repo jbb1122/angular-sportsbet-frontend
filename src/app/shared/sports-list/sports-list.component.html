@@ -1,0 +1,44 @@
+<div class="main-left-menu">
+    <div class="search">
+        <input type="text" placeholder="Takım veya turnuva adı girin.">
+        <button><i class="fa fa-search"></i></button>
+    </div>
+    <div class="main-left-nav">
+        <div class="title">MENÜ</div>
+        <div class="panel-group sidebar">
+            <div *ngFor="let sport of sports" class="card">
+                <div class="card-header">
+                    <a data-toggle="collapse" href="#collapse-{{sport.type}}">
+                        <div class="icon"><img src="./assets/img/icons/{{sport.type}}.svg"/></div>
+                        <div class="text">{{sport.name}}</div>
+                        <div class="live" *ngIf="sport.is_live_active"><label>Canlı</label></div>
+                        <div class="piece">{{(sport.events_count > 999 ? "999+" : sport.events_count)}}</div>
+                        <div class="down"><i class="fa fa-chevron-down"></i></div>
+                    </a>
+                </div>
+                <div id="collapse-{{sport.type}}" class="panel-collapse collapse">
+                    <div *ngFor="let region of sport.regions" class="card">
+                        <div class="card-header">
+                            <label class="toggle">
+                                <input type="checkbox" class="top" (change)="toggle($event);"  /><i class="fa"></i>
+                            </label>
+                            <div class="icon"><img src="./assets/img/flags/{{region.type}}.svg"/></div>
+                            <a data-toggle="collapse" href="#collapse-{{region.type}}">{{region.name}} <i class="fa fa-chevron-down"></i></a>
+
+                        </div>
+                        <div id="collapse-{{region.type}}" class="panel-collapse collapse">
+                            <ul class="list-group">
+                                <li *ngFor="let league of region.leagues" class="list-group-item">
+                                    <label class="toggle">
+                                        <input type="checkbox" (change)="toggle($event);" /><i class="fa"></i>
+                                    </label>
+                                    <a [routerLink]="['/competitions/', league.sport_id, league.region_id, league.id]">{{league.name}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button *ngIf="sportsChecked" class="btn btn-save btn-activity radius-none">GÖNDER</button>
+        </div>
+    </div>

@@ -1,0 +1,71 @@
+<app-menu-histories [histories]="pathNames"></app-menu-histories>
+<div class="fv-content">
+    <div class="detail-item">
+        <div class="collapse content active show" id="t1">
+            <div class="ic-content">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#match-odds">NOW & NEXT</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#coupons">COUPONS</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="match-odds">
+                        <app-market-bar (changeMarketOrder)="onChangeMarketOrder($event)" [markets]="markets"></app-market-bar>
+                        <div class="row table-content">
+                            <app-bet-item *ngFor="let evt of allEvents" [betEvent]="evt" [markets]="markets"></app-bet-item>
+                            <button *ngIf="allEvents.length == 20" class="btn btn-activity">
+                                ETKİNLİKLERİN TÜMÜNÜ GÖRÜNTÜLEYİN
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="coupons">
+                        <div class="coupons-detail-content">
+                            <div class="title">COUPONS</div>
+                            <div class="content tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active p10" id="c-futbol">
+                                    <div class="item">
+                                        <a [routerLink]="['sport/'+(sport && sport.id)+'/match/1']">
+                                            <div class="img"><img src="../../../assets/img/c1.png"></div>
+                                            <div class="text">
+                                                <h6>Today matches</h6>
+                                                <label>( 51 )</label>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a [routerLink]="['sport/'+(sport && sport.id)+'/match/2']">
+                                            <div class="img"><img src="../../../assets/img/c1.png"></div>
+                                            <div class="text">
+                                                <h6>Tomorrow matches</h6>
+                                                <label>( 51 )</label>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a [routerLink]="['sport/'+(sport && sport.id)+'/match/3']">
+                                            <div class="img"><img src="../../../assets/img/c1.png"></div>
+                                            <div class="text">
+                                                <h6>Upcoming matches</h6>
+                                                <label>( 51 )</label>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a [routerLink]="['sport/'+(sport && sport.id)+'/topleagues']">
+                                            <div class="img"><img src="../../../assets/img/c1.png"></div>
+                                            <div class="text">
+                                                <h6>My leagues</h6>
+                                                <label>( 51 )</label>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

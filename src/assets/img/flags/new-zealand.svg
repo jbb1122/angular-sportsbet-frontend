@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 126 126" enable-background="new 0 0 126 126" xml:space="preserve">
+<g>
+	<g>
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#0437A0" points="13,29.7 63,29.7 113,29.7 113,96.3 63,96.3 13,96.3 
+			13,29.7 		"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M33.9,29.7h1.6v13.2H13v-2.1h10.6l-10.6-7v-2.6l14.4,9.6h4.6
+			L15.3,29.7h3.9l14.7,9.8V29.7L33.9,29.7z M40.6,29.7h1.6v9.8l14.7-9.8h3.9L43.9,40.8h4.6L63,31.2v2.6l-10.6,7H63v2.1H40.6V29.7
+			L40.6,29.7z M63,49.8v2.1H52.4l10.6,7v2.6l-14.4-9.6h-4.6L60.7,63h-3.9l-14.7-9.8V63h-1.6V49.8H63L63,49.8z M35.4,63h-1.6v-9.8
+			L19.2,63h-3.9l16.7-11.2h-4.6L13,61.5v-2.6l10.6-7H13v-2.1h22.4V63L35.4,63z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#FF1612" d="M40.6,29.7v13.2H63v6.9H40.6V63H38h-2.6V49.8H13v-6.9h22.4V29.7
+			H38H40.6L40.6,29.7z M63,61.5l-14.4-9.6h-4.6L60.7,63H63V61.5L63,61.5z M48.6,40.8L63,31.2v-1.5h-2.3L43.9,40.8H48.6L48.6,40.8z
+			 M32.1,40.8L15.3,29.7H13v1.5l14.4,9.6H32.1L32.1,40.8z M27.4,51.9L13,61.5V63h2.3l16.7-11.2H27.4L27.4,51.9z"/>
+		
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="#FF1612" stroke="#FFFFFF" stroke-width="9.091500e-02" stroke-miterlimit="2.4142" d="
+			M88.9,73.6l0.6,2l2.1,0L90,76.9l0.7,2l-1.7-1.2l-1.7,1.2l0.7-2l-1.7-1.2l2.1,0L88.9,73.6L88.9,73.6z M99.9,51.2l0.6,2l2.1,0
+			l-1.7,1.2l0.7,2l-1.7-1.2l-1.7,1.2l0.7-2l-1.7-1.2l2.1,0L99.9,51.2L99.9,51.2z M76.8,54.4l0.6,2l2.1,0l-1.7,1.2l0.7,2l-1.7-1.2
+			l-1.7,1.2l0.7-2L74,56.4l2.1,0L76.8,54.4L76.8,54.4z M89.2,42l0.6,2l2.1,0l-1.7,1.2l0.7,2L89.2,46l-1.7,1.2l0.7-2L86.4,44l2.1,0
+			L89.2,42L89.2,42z"/>
+	</g>
+	<path opacity="0.25" fill="#FFFFFF" d="M13,29.7v25.5C26.2,62.6,43.7,67,63,67c19.3,0,36.8-4.5,50-11.8V29.7H13z"/>
+</g>
+</svg>

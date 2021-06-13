@@ -1,0 +1,28 @@
+.table-top {display: flex; text-align:center;}
+.table-top div {padding:0px;}
+
+.table-top .row-fluid button {background:transparent; font-size:13px;}
+.table-top .row-fluid button i {font-size:10px;}
+
+.last-col {width: 5%!important}
+.markets-wrapper {justify-content: flex-end;}
+.market-col-1,.market-col-2,.market-col-3,.market-col-4,.market-col-5,.market-col-6,.market-col-7,.market-col-8,.market-col-9 {
+    min-height: 1px;
+    position: relative;
+    width: 100%;
+}
+.market-col-1 {flex: 0 0 11.111111111%;max-width: 11.11111111%;}
+.market-col-2 {flex: 0 0 22.222222222%;max-width: 22.22222222%;}
+.market-col-3 {flex: 0 0 33.333333333%;max-width: 33.33333333%;}
+.market-col-4 {flex: 0 0 44.444444444%;max-width: 44.44444444%;}
+.market-col-5 {flex: 0 0 55.555555555%;max-width: 55.55555555%;}
+.market-col-6 {flex: 0 0 66.666666666%;max-width: 66.66666666%;}
+.market-col-7 {flex: 0 0 77.777777777%;max-width: 77.77777777%;}
+.market-col-8 {flex: 0 0 88.888888888%;max-width: 88.88888888%;}
+.market-col-9 {flex: 0 0 99.999999999%;max-width: 99.99999999%;}
+
+@media (max-width:768px) {
+    .table-top {
+        display:none;
+    }
+}

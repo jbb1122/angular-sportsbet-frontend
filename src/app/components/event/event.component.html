@@ -1,0 +1,232 @@
+<div class="main">
+    <section class="main-left detail-left">
+        <div class="main-left-menu">
+            <div class="search">
+                <input type="text" placeholder="Takım veya turnuva adı girin.">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+            <div class="main-left-nav">
+                <div class="panel-group sidebar two">
+                    <div class="card">
+                        <div class="card-header">
+                            <a data-toggle="collapse" href="#detail-{{sport && sport.type}}">
+                                <div class="icon"><img src="../../../assets/img/icons/{{sport && sport.type}}.svg"/></div>
+                                <div class="text">{{sport && sport.name}}</div>
+                                <div class="down"><i class="fa fa-chevron-down"></i></div>
+                            </a>
+
+                        </div>
+                        <div id="detail-{{sport && sport.type}}" class="panel-collapse collapse show">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#detail-world">
+                                        <img src="../../../assets/img/flags/{{region && region.type}}.svg"> <label>Club Friendly Games, World</label> <i class="fa fa-chevron-down"></i>
+                                    </a>
+                                </div>
+                                <div id="detail-world" class="panel-collapse collapse show">
+                                    <div class="item">
+                                        <div class="top">
+                                            <div class="favorite">
+                                                <button><i class="far fa-star"></i></button>
+                                            </div>
+                                            <div class="live">
+                                                <label>CANLI</label>
+                                            </div>
+                                            <div class="dk">
+                                                <label>5'|</label>
+                                            </div>
+                                            <div class="name">
+                                                <img src="../../../assets/img/flags/{{region && region.type}}.svg"> <label>Club Friendly Games ...</label>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="left">
+                                                <label><label>1</label> Spain (Foggy)</label>
+                                                <label><label>11</label> Belgium (Inquisitor)</label>
+                                            </div>
+                                            <div class="right"><a href="#"><i class="fas fa-tv"></i></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="top">
+                                            <div class="favorite">
+                                                <button><i class="far fa-star"></i></button>
+                                            </div>
+                                            <div class="live">
+                                                <label>CANLI</label>
+                                            </div>
+                                            <div class="dk">
+                                                <label>5'|</label>
+                                            </div>
+                                            <div class="name">
+                                                <img src="../../../assets/img/flags/{{region && region.type}}.svg"> <label>Club Friendly Games ...</label>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="left">
+                                                <label><label>1</label> Spain (Foggy)</label>
+                                                <label><label>11</label> Belgium (Inquisitor)</label>
+                                            </div>
+                                            <div class="right"><a href="#"><i class="fas fa-tv"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="main-center">
+        <app-menu-histories [histories]="pathNames"></app-menu-histories>
+        <div class="leaderboard">
+            <div class="title">SPAIN CYBER STARS LEAGUE</div>
+            <div class="item">
+                <div class="left">
+                    <div class="img"><img src="../../../assets/img/uniform.png"></div> <label>Levante (Forcemajor!)</label>
+                </div>
+                <div class="center">3 : 3</div>
+                <div class="right">
+                <label>Levante (Forcemajor!)</label>
+                    <div class="img"><img src="../../../assets/img/uniform.png"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="detail-rate-table rate-table">
+            <div class="item">
+                <div class="title item-collapse" data-toggle="collapse" href="#dt1">
+                    <button class="btn btn-heart">
+                        <i class="far fa-star"></i>
+                    </button>
+                    <span>3 Yollu</span>
+                    <label>
+                        <i class="fa fa-angle-up"></i>
+                    </label>
+                </div>
+                <div class="collapse content active show" id="dt1">
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="rate">
+                                    <span>1</span>
+                                    <strong>2.00</strong>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="rate">
+                                    <span>1</span>
+                                    <strong>2.00</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="title item-collapse" data-toggle="collapse" href="#dt2">
+                    <button class="btn btn-heart">
+                        <i class="far fa-star"></i>
+                    </button>
+                    <span>3 Yollu</span>
+                    <label>
+                        <i class="fa fa-angle-up"></i>
+                    </label>
+                </div>
+                <div class="collapse content active show" id="dt2">
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="rate">
+                                    <span>1</span>
+                                    <strong>2.00</strong>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="rate">
+                                    <span>1</span>
+                                    <strong>2.00</strong>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="rate">
+                                    <span>1</span>
+                                    <strong>2.00</strong>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="rate">
+                                    <span>1</span>
+                                    <strong>2.00</strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="title item-collapse" data-toggle="collapse" href="#dt3">
+                    <button class="btn btn-heart">
+                        <i class="far fa-star"></i>
+                    </button>
+                    <span>3 Yollu</span>
+                    <label>
+                        <i class="fa fa-angle-up"></i>
+                    </label>
+                </div>
+                <div class="collapse content active show" id="dt3">
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="c-timeline">
+                                    <input type="radio" name="stage" id="ol1" />
+                                    <input type="radio" name="stage" id="ol2" />
+                                    <input type="radio" name="stage" id="ol3" />
+                                    <input type="radio" name="stage" id="ol4" />
+                                    <input type="radio" name="stage" id="ol5" />
+                                    <label for="ol1"><span>1</span></label>
+                                    <label for="ol2"><span>2</span></label>
+                                    <label for="ol3"><span>3</span></label>
+                                    <label for="ol4"><span>4</span></label>
+                                    <label for="ol5"><span>+5</span></label>
+                                    <div class="progress">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="rate">
+                                    <span>3:3</span>
+                                    <strong>2.00</strong>
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="c-timeline">
+                                    <input type="radio" name="stage" id="r1" />
+                                    <input type="radio" name="stage" id="r2" />
+                                    <input type="radio" name="stage" id="r3" />
+                                    <input type="radio" name="stage" id="r4" />
+                                    <input type="radio" name="stage" id="r5" />
+                                    <label for="r1"><span>1</span></label>
+                                    <label for="r2"><span>2</span></label>
+                                    <label for="r3"><span>3</span></label>
+                                    <label for="r4"><span>4</span></label>
+                                    <label for="r5"><span>+5</span></label>
+                                    <div class="progress">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

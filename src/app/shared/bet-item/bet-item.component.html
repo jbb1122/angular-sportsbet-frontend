@@ -1,0 +1,130 @@
+<div class="item hidden-xs">
+    <div class="item-property" [ngClass]="{'live': betEvent && betEvent.is_live}">
+        <ul>
+            <li *ngIf="betEvent && betEvent.is_live"><label>CANLI</label></li>
+            <li *ngIf="betEvent && betEvent.is_live"><label>{{betEvent && betEvent.stats.current_minute}}'|</label></li>
+            <li *ngIf="betEvent && !betEvent.is_live"><span>{{
+                (betEvent && betEvent.start_at_date.split(".")[0]) 
+                + "/" + 
+                (betEvent && betEvent.start_at_date.split(".")[1])}}
+                 • 
+                {{betEvent && betEvent.start_at_hour}}</span></li> 
+            <li *ngIf="betEvent && !betEvent.is_live"></li> 
+            <li><label><img src="../../../assets/img/flags/{{betEvent && betEvent.region.type}}.svg">{{betEvent && betEvent.name}}</label></li>
+        </ul>
+    </div>
+    <div class="row live-rate">
+       <div class="col-4 item-title no-pr" [routerLink]="['/event/', betEvent.sport_id, betEvent.region_id, betEvent.league_id, betEvent.id]">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row-fluid">{{betEvent && betEvent.stats.score.split(":")[0]}} {{betEvent && betEvent.home_team.name}}</div>
+                    <div class="row-fluid">{{betEvent && betEvent.stats.score.split(":")[1]}} {{betEvent && betEvent.away_team.name}}</div>
+                </div>
+                <div class="col-md-3 no-p">
+                    <ul class="statistic">
+                        <li>  
+                            <label *ngIf="betEvent && betEvent.is_live">CANLI</label>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-signal" aria-hidden="true"></i></a>
+                        </li> 
+                     </ul>
+                </div>
+            </div>
+            
+        </div> 
+        <div class="col-8 item-content">
+            <ng-container *ngFor="let featured_market of betEvent.featured_markets">
+                <div *ngFor="let market_odd of featured_market.odds" class="col">
+                    <label (click)="setBet(market_odd, featured_market.market_type)" class="rate" [ngClass]="{'active': (betSlip.selected[market_odd.id] ? true : false)}">{{market_odd.price}}</label>
+                </div>
+            </ng-container>
+             <div class="col">
+                <a class="item-collapse" data-toggle="collapse" [attr.href]="'#item_content' + (betEvent && betEvent.id)">
+                    <i class="fa fa-angle-down"></i>
+                </a>
+             </div>
+        </div>
+    </div>
+    <div class="collapse" [attr.id]="'item_content' + (betEvent && betEvent.id)">
+        <div class="ic-content">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#hepsi">HEPSİ</a>
+                    <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#ana-bahisler">ANA BAHİSLER</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#kombo">KOMBO</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade" id="hepsi">...</div>
+                <div class="tab-pane fade show active" id="ana-bahisler">
+                    <div *ngFor="let featured_market of (betEvent && betEvent.featured_markets);let index = index" class="detail-item">
+                        <div class="title item-collapse" data-toggle="collapse" href="#featured_market_{{featured_market.id}}">
+                            <button class="btn btn-heart">
+                                <i class="far fa-star"></i>
+                            </button>
+                            <span>{{featured_market.name}}</span>
+                            <label>
+                                 <i class="fa fa-angle-up"></i> 
+                            </label>
+                           </div>
+                        <div class="collapse content {{index == 0 ? 'active show' : ''}}" id="featured_market_{{featured_market.id}}">
+                             <div class="row">
+                                 <div *ngFor="let odd of featured_market.odds" class="col-md-3">
+                                     <label class="rate">
+                                         <span>{{odd.name}}</span> 
+                                         <strong>{{odd.price}}</strong>
+                                     </label>
+                                 </div>
+                             </div> 
+                        </div>
+                     </div> 
+                </div>
+                <div class="tab-pane fade" id="kombo">...</div>
+            </div> 
+        </div>
+    </div>
+</div>
+<div class="mobile-item visible-xs">
+    <div class="top">
+        <select>
+            <option *ngFor="let market of markets">{{markets.name}}</option>
+        </select>
+    </div>
+    <div class="item">
+        <div class="live-title">
+            <ul>
+                <li *ngIf="betEvent && betEvent.is_live"><label>CANLI</label></li>
+                <li *ngIf="betEvent && betEvent.is_live"><label>{{betEvent && betEvent.stats.current_minute}}'|</label></li>
+                <li *ngIf="betEvent && !betEvent.is_live"><span>{{
+                    betEvent && betEvent.start_at_date.split(".")[0] 
+                    + "/" + 
+                    betEvent && betEvent.start_at_date.split(".")[1]
+                }} • {{betEvent && betEvent.start_at_hour}}</span></li> 
+                <li *ngIf="betEvent && !betEvent.is_live"></li> 
+                <li><label><img src="../../../assets/img/flags/{{betEvent && betEvent.region.type}}.svg">{{betEvent && betEvent.name}}</label></li>
+            </ul>
+        </div>
+        <div class="row live-rate">
+            <div class="col-4 item-title no-pr" [routerLink]="['/event/', betEvent.sport_id, betEvent.region_id, betEvent.league_id, betEvent.id]">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="row-fluid">{{betEvent && betEvent.stats.score.split(":")[0]}} {{betEvent && betEvent.home_team.name}}</div>
+                        <div class="row-fluid">{{betEvent && betEvent.stats.score.split(":")[1]}} {{betEvent && betEvent.away_team.name}}</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row rate-list">
+            <ng-container *ngFor="let featured_market of (betEvent && betEvent.featured_markets)">
+                <div *ngFor="let event_odd of featured_market.odds" class="col-md-4">
+                    <label class="rate">
+                        <span>{{event_odd.name}}</span>
+                        <strong>{{event_odd.price}}</strong>
+                    </label>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

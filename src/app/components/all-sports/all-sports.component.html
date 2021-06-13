@@ -1,0 +1,13 @@
+<app-menu-histories [histories]="pathNames"></app-menu-histories>
+<div class="content">
+    <div class="title">ALL SPORTS</div>
+    <a *ngFor="let sport of sports" [routerLink]="['/sport/', sport.id]">
+        <div class="item">
+            <div class="icon"><img src="./assets/img/icons/{{sport.type}}.svg"></div>
+            <div class="text">{{sport.name}}</div>
+            <div class="live" *ngIf="sport.is_live_active"><label>Canlı</label></div>
+            <div class="piece">{{(sport.events_count > 999 ? "999+" : sport.events_count)}}</div>
+            <div class="clearfix"></div>
+        </div>
+    </a>
+</div>

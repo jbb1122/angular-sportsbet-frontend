@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 126 126" enable-background="new 0 0 126 126" xml:space="preserve">
+<g>
+	<g>
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFDA1E" points="113,46.3 113,29.7 13,29.7 40.8,46.3 113,46.3 		"/>
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#F0F0F0" points="113,63 113,46.3 40.8,46.3 68.6,63 113,63 		"/>
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#F90805" points="113,79.7 113,63 68.6,63 40.8,79.7 113,79.7 		"/>
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#3A95F2" points="13,96.3 113,96.3 113,79.7 40.8,79.7 13,96.3 		"/>
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#47B71D" points="13,96.3 68.6,63 13,29.7 13,96.3 		"/>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-2504.7612" y1="3177.8325" x2="-2462.3315" y2="3209.8054" gradientTransform="matrix(0.5039 0 0 0.5039 1280.0815 -1548.0093)">
+			<stop  offset="4.000000e-02" style="stop-color:#EDEDEE"/>
+			<stop  offset="0.2608" style="stop-color:#F8F8F8"/>
+			<stop  offset="0.5276" style="stop-color:#FAFAFA"/>
+			<stop  offset="0.7392" style="stop-color:#F8F8F8"/>
+			<stop  offset="0.96" style="stop-color:#EDEDEE"/>
+		</linearGradient>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_1_)" d="M35.2,48.4c-9.3-2.1-18.3,4.9-18.3,14.6
+			c0,9.7,9,16.7,18.3,14.6c-6.7-1.5-11.7-7.5-11.7-14.6C23.6,55.9,28.5,49.9,35.2,48.4L35.2,48.4z M35.2,71l0.6,1.9l2,0l-1.6,1.2
+			l0.6,1.9l-1.6-1.2L33.6,76l0.6-1.9l-1.6-1.2l2,0L35.2,71L35.2,71z M35.2,49.5l0.6,1.9l2,0l-1.6,1.2l0.6,1.9l-1.6-1.2l-1.6,1.2
+			l0.6-1.9l-1.6-1.2l2,0L35.2,49.5L35.2,49.5z M35.2,56.7l0.6,1.9l2,0l-1.6,1.2l0.6,1.9l-1.6-1.2l-1.6,1.2l0.6-1.9l-1.6-1.2l2,0
+			L35.2,56.7L35.2,56.7z M35.2,63.8l0.6,1.9l2,0l-1.6,1.2l0.6,1.9l-1.6-1.2l-1.6,1.2l0.6-1.9l-1.6-1.2l2,0L35.2,63.8L35.2,63.8z"/>
+	</g>
+	<path opacity="0.25" fill="#FFFFFF" d="M13,29.7v25.5C26.2,62.6,43.7,67,63,67c19.3,0,36.8-4.5,50-11.8V29.7H13z"/>
+</g>
+</svg>

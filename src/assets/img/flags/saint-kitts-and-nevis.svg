@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 126 126" enable-background="new 0 0 126 126" xml:space="preserve">
+<g>
+	<g>
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#47B71D" points="87.8,29.7 13,29.7 13,79.5 87.8,29.7 		"/>
+		<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FF1612" points="38.2,96.3 113,96.3 113,46.5 38.2,96.3 		"/>
+		<path fill="#FEDC36" d="M13,79.5l74.8-49.8H95L13,84.3V79.5L13,79.5z M113,41.7v4.8L38.2,96.3H31L113,41.7L113,41.7z"/>
+		<polygon points="13,84.3 95,29.7 113,29.7 113,41.7 31,96.3 13,96.3 13,84.3 		"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#F4F4F4" d="M37.4,69.6l5.3,4.2l5.6-3.8l-2.4,6.4l5.3,4.2l-6.8-0.3l-2.4,6.4
+			l-1.8-6.5l-6.8-0.3l5.6-3.8L37.4,69.6L37.4,69.6z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#F4F4F4" d="M78.1,42.4l5.3,4.2l5.6-3.8l-2.4,6.4l5.3,4.2l-6.8-0.3l-2.4,6.4
+			L81.1,53l-6.8-0.3l5.6-3.8L78.1,42.4L78.1,42.4z"/>
+	</g>
+	<path opacity="0.35" fill="#FFFFFF" d="M13,29.7v25.5C26.2,62.6,43.7,67,63,67c19.3,0,36.8-4.5,50-11.8V29.7H13z"/>
+</g>
+</svg>

@@ -1,0 +1,124 @@
+<div class="betslip">
+    <h4>BETSLİP <span *ngIf="betSlip.betslip.length > 0" class="bet-badge">{{betSlip.betslip.length}}</span></h4>
+    <div *ngIf="betSlip.betslip.length == 0" class="title-no-selection">No selections in the betslip</div>
+    <nav *ngIf="betSlip.betslip.length > 0">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link{{betSlip.betslip.length <= 1 ? ' active' : ''}}" id="nav-home-tab">TEKLİ</a>
+            <a class="nav-item nav-link{{betSlip.betslip.length > 1 ? ' active' : ''}}" id="nav-profile-tab">KOMBİNE</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent" *ngIf="betSlip.betslip.length > 0">
+        <div class="tab-pane fade{{betSlip.betslip.length <= 1 ? ' show active' : ''}}" id="simple">
+            <div class="betslip-content">
+                <div class="item" *ngFor="let item of betSlip.betslip.slice(0,1)">
+                    <div class="description">
+                        <div class="live">
+                            <label *ngIf="item.is_live">CANLI</label>
+                            <label style="padding: 0;background-color: white;" *ngIf="!item.is_live">&nbsp;</label>
+                        </div>
+                        <div class="name">{{item.home_team}} vs. {{item.away_team}}</div>
+                        <div class="close"><a (click)="setBet(item)"><i class="fa fa-times"></i></a></div>
+                    </div>
+                    <div class="market_type">
+                        <label class="fight">{{betSlip.markets[item.odd_type.market_type_id].name}}</label>
+                    </div>
+                    <div>
+                        <div class="selection">{{item.name}}</div>
+                        <div class="slip-rate">{{item.price}}</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="betslip-footer">
+                <div class="clear-all"><a (click)="clearBetslip()">Hepsini Temizle <i class="fa fa-times"></i></a></div>
+                <div class="col-12 allow_change_speed_wrapper">
+                    <input type="checkbox" id="allow_change_speed" />
+                    <label for="allow_change_speed">Oran değişimini kabul et</label>
+                </div>
+                <div class="rate-table">
+                    <div class="row item">
+                        <div class="col-6">Total Odds</div>
+                        <div class="col-6">{{betCalcInfo.betAmount}}</div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-6">Column Number</div>
+                        <div class="col-6">{{betCalcInfo.totalBets}}</div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-6">Full Bet</div>
+                        <div class="col-6"><input type="text" value="{{betCalcInfo.fullBet}}" (keypress)="changedFullBet($event)"/></div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-6">Max Gain</div>
+                        <div class="col-6">{{betCalcInfo.possibleProfite}}</div>
+                    </div>
+                </div>
+                <div class="footer-button">
+                    <button type="button" class="btn btn-danger">BAHİS YAP</button>
+                </div>
+                <div class="rate-return">
+                    <select>
+                        <option selected>Oran değişimini her zaman sor</option>
+                        <option>Değişen oranları kabul et</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade{{betSlip.betslip.length > 1 ? ' show active' : ''}}" id="combined">
+            <div class="betslip-content">
+                <div class="item" *ngFor="let item of betSlip.betslip">
+                    <div class="description">
+                        <div class="live">
+                            <label *ngIf="item.is_live">CANLI</label>
+                            <label style="padding: 0;background-color: white;" *ngIf="!item.is_live">&nbsp;</label>
+                        </div>
+                        <div class="name">{{item.home_team}} vs. {{item.away_team}}</div>
+                        <div class="close"><a (click)="setBet(item)"><i class="fa fa-times"></i></a></div>
+                    </div>
+                    <div class="market_type">
+                        <label class="fight">{{betSlip.markets[item.odd_type.market_type_id].name}}</label>
+                    </div>
+                    <div>
+                        <div class="selection">{{item.name}}</div>
+                        <div class="slip-rate">{{item.price}}</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="betslip-footer">
+                <div class="clear-all"><a (click)="clearBetslip()">Hepsini Temizle <i class="fa fa-times"></i></a></div>
+                <div class="col-12 allow_change_speed_wrapper">
+                    <input type="checkbox" id="allow_change_speed" />
+                    <label for="allow_change_speed">Oran değişimini kabul et</label>
+                </div>
+                <div class="rate-table">
+                    <div class="row item">
+                        <div class="col-6">Total Odds</div>
+                        <div class="col-6">{{betCalcInfo.betAmount}}</div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-6">Column Number</div>
+                        <div class="col-6">{{betCalcInfo.totalBets}}</div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-6">Full Bet</div>
+                        <div class="col-6"><input type="text" value="{{betCalcInfo.fullBet}}" (keypress)="changedFullBet($event)"/></div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-6">Max Gain</div>
+                        <div class="col-6">{{betCalcInfo.possibleProfite}}</div>
+                    </div>
+                </div>
+                <div class="footer-button">
+                    <button type="button" class="btn btn-danger">BAHİS YAP</button>
+                </div>
+                <div class="rate-return">
+                    <select>
+                        <option selected>Oran değişimini her zaman sor</option>
+                        <option>Değişen oranları kabul et</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

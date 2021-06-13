@@ -1,0 +1,12 @@
+<div class="top-leagues">
+    <ul>
+        <li class="active"><h4>TOP LEAGUES</h4></li>
+        <li *ngFor="let league of topLeagues">
+            <a [routerLink]="['/competitions/', league.sport_id, league.region_id, league.id]">
+                <div class="img"><img src="assets/img/flags/{{league.region.type}}.svg"></div>
+                <div class="text">{{league.name}}</div>
+                <div *ngIf="league.is_live_active" class="live"><label>LIVE</label></div>
+            </a>
+        </li>
+    </ul>
+</div>

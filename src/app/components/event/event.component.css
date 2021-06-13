@@ -1,0 +1,167 @@
+/** MAC-DETAY.HTML **/
+
+.main-left.detail-left {
+    margin-right: 16px;
+    width: 250px;
+    min-width: 250px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+}
+
+.main-left.detail-left .main-left-nav .card .card-header a .text {
+    width:184px;
+}
+
+.main-left.detail-left .main-left-nav .card .panel-collapse .card .card-header {
+    padding:0px;
+    background: #292929;
+    color:#fff;
+}
+.main-left.detail-left .main-left-nav .card .panel-collapse .card .card-header a {
+    color:#fff;
+    padding:10px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.main-left.detail-left .main-left-nav .card .panel-collapse .card .card-header a img {
+    width:19px; height:19px; border-radius:100%; float: left; margin-right:4px;
+}
+.main-left.detail-left .main-left-nav .card .panel-collapse .card .card-header a label {
+    padding-top:2px;
+    position:absolute;
+    cursor:pointer;
+}
+.main-left.detail-left .main-left-nav .two .top .favorite  {
+    width:25px; height:auto; float:left; text-align:center;
+}
+.main-left.detail-left .main-left-nav .two .top .favorite button {
+    background:transparent;
+    color:#292929; border:none; box-shadow:none; outline:none;
+    font-size:14px;
+}
+.main-left.detail-left .main-left-nav .two .top .favorite button:active .far,
+.main-left.detail-left .main-left-nav .two .top .favorite button:focus .far,
+.main-left.detail-left .main-left-nav .two .top .favorite button:hover .far
+{
+    font-weight:900;
+}
+.main-left.detail-left .main-left-nav .two .item {
+    background:#ffffff;
+    cursor:pointer; border-bottom:0.5px solid #30303020;
+}
+
+
+.main-left.detail-left .main-left-nav .two .item label {
+    cursor:pointer;
+}
+.main-left.detail-left .main-left-nav .two .top {
+    width:100%;
+    height:auto;
+    padding-top:5px; padding-bottom:5px;
+    color:#292929;
+
+}
+.main-left.detail-left .main-left-nav .two .top .live {
+    width:40px; height:auto; float:left; text-align:center;
+}
+.main-left.detail-left .main-left-nav .two .top .live label {
+    text-transform: uppercase;
+    color: white;
+    background: #e0000f;
+    font-size:10px;
+    border-radius: 2px;
+    padding: 1px 5px 0 5px;
+    line-height: 15px;
+    font-weight: 600;
+    height: 16px;
+    cursor: pointer;
+}
+.main-left.detail-left .main-left-nav .two .top .dk {
+    width:30px; height:auto; float:left; text-align:center;
+}
+.main-left.detail-left .main-left-nav .two .top .dk label {
+    font-size:12px;
+}
+.main-left.detail-left .main-left-nav .two .top .name {
+    width: calc(100% - 95px); float:right;
+}
+.main-left.detail-left .main-left-nav .two .top .name img {
+    width:15px; height:15px; border-radius:100%;
+    float:left; margin-right:3px;
+    vertical-align:top;
+    margin-top:5px;
+}
+
+.main-left.detail-left .main-left-nav .two .top .name label {
+    font-size:11px; font-weight: normal;
+}
+.main-left.detail-left .main-left-nav .two .content {
+    color:#292929;
+    padding: 0px;
+    display: flex;
+    padding-bottom:10px;
+}
+.main-left.detail-left .main-left-nav .two .content .left {
+    min-width: 0%;
+    width: auto;
+    max-width: 100%;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    font-size:12px;
+    padding-left:5px;
+
+}
+.main-left.detail-left .main-left-nav .two .content .left label {
+    width:100%; margin-top:3px;
+}
+.main-left.detail-left .main-left-nav .two .content .left label label {
+    width:20px; display:block; float:left; margin:0px; padding:0px;
+}
+
+.main-left.detail-left .main-left-nav .two .content .right {
+    min-width: 30px;
+    width: 30px;
+    display: flex;
+    padding-right:10px;
+}
+.main-left.detail-left .main-left-nav .two .content .right a {
+    color:#292929;
+    margin-top:15px;
+    font-size:12px;
+    width:100%;
+    display: inline-block;
+    text-align: right;
+}
+
+.main-left.detail-left .main-left-nav .two .item:active,
+.main-left.detail-left .main-left-nav .two .item:active label,
+.main-left.detail-left .main-left-nav .two .item:active button,
+.main-left.detail-left .main-left-nav .two .item:active a,
+.main-left.detail-left .main-left-nav .two .item:focus,
+.main-left.detail-left .main-left-nav .two .item:focus label,
+.main-left.detail-left .main-left-nav .two .item:focus button,
+.main-left.detail-left .main-left-nav .two .item:focus a,
+.main-left.detail-left .main-left-nav .two .item:hover,
+.main-left.detail-left .main-left-nav .two .item:hover label,
+.main-left.detail-left .main-left-nav .two .item:hover button,
+.main-left.detail-left .main-left-nav .two .item:hover a
+{
+    background:#767676;
+    color:#fff !important;
+}
+@media (max-width: 768px) {
+    
+    .main-left .main-left-nav .card .card-header a .text {
+        width: calc(100% - 126px);
+    }
+}

@@ -1,0 +1,135 @@
+<app-menu-histories [histories]="pathNames"></app-menu-histories>
+<div class="fv-content">
+    <div class="detail-item">
+    <div class="ic-content">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#match-odds">MATCH ODDS</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#outrights">OUTRIGHTS</a> 
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="match-odds">
+                <div class="ic-content">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#by-league" (click)="getEvents(sportId, 'league|date')">BY LEAGUE</a>
+                        <a class="nav-item nav-link " id="nav-profile-tab" data-toggle="tab" href="#by-time" (click)="getEvents(sportId, 'date')">BY TIME</a> 
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade active show" id="by-league">
+                            <div class="mc-content">
+                                <app-market-bar (changeMarketOrder)="onChangeMarketOrder($event)" [markets]="markets"></app-market-bar>
+                                <div class="table-content">
+                                    <div class="detail-item" *ngFor="let leagueEvents of allLeagueEvents;let leagueIndex = index">
+                                        <div class="title">
+                                            <a class="item-collapse" data-toggle="collapse" href="#league-{{leagueEvents.nodes.league.id}}">
+                                                <button class="btn btn-heart">
+                                                    <i class="far fa-star"></i>
+                                                </button>
+                                                <span><label><img src="../../../assets/img/flags/{{leagueEvents.nodes.region.type}}.svg"> {{leagueEvents.nodes.league.name}}</label></span>
+                                                <label>
+                                                    <i class="fa fa-angle-{{leagueIndex == 0 ? 'up' : ''}}"></i> 
+                                                </label>
+                                            </a>
+                                        </div>
+                                        <div class="collapse content{{leagueIndex == 0 ? ' active show' : ''}}" id="league-{{leagueEvents.nodes.league.id}}">
+                                            <ng-container *ngFor="let dateEvents of leagueEvents.events;let index = index">
+                                                <div class="fv-date-title">
+                                                    <a class="item-collapse" data-toggle="collapse" href="#league-date-{{index}}">
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i> {{dateEvents.date}} 
+                                                        <label><i class="fa fa-angle-{{index < 3 ? 'up' : ''}}"></i></label>
+                                                    </a>
+                                                </div>
+                                                <div class="fv-date-content{{index < 3 ? ' show' : ''}}" id="league-date-{{index}}">    
+                                                    <app-bet-item *ngFor="let evt of dateEvents.events" [betEvent]="evt" [markets]="markets"></app-bet-item>
+                                                </div> 
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="by-time">
+                            <div class="mc-content">
+                                <app-market-bar (changeMarketOrder)="onChangeMarketOrder($event)" [markets]="markets"></app-market-bar>
+                                <div class="table-content">
+                                    <div class="detail-item hidden-xs">
+                                        <div *ngFor="let dateEvents of allTeamEvents;let index = index">
+                                            <div class="fv-date-title">
+                                                <a class="item-collapse" data-toggle="collapse" href="#team-date-{{index}}">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i> {{dateEvents.date}}
+                                                    <label><i class="fa fa-angle-{{index < 5 ? 'up' : ''}}"></i></label>
+                                                </a>
+                                            </div>
+                                            <div class="fv-date-content{{index < 5 ? ' show' : ''}}" id="team-date-{{index}}">
+                                                <app-bet-item *ngFor="let evt of dateEvents.events" [betEvent]="evt" [markets]="markets"></app-bet-item>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+            <div class="tab-pane" id="outrights">
+                <div class="mc-content">
+                    <div class="table-content">
+                        <div class="detail-item">
+                            <div class="title item-collapse" data-toggle="collapse" href="#t12">
+                                <button class="btn btn-heart">
+                                    <i class="far fa-star"></i>
+                                </button>
+                                <span><label><img src="../../../assets/img/flags/{{league && region.type}}.svg"> {{league && league.name}}</label></span>
+                                <label>
+                                    <i class="fa fa-angle-up"></i> 
+                                </label>
+                                </div>
+                            <div class="collapse content active show" id="t12">
+                                <div class="ou-date-title item-collapse" data-toggle="collapse" href="#o1">
+                                    <div><b>Premier League 2020/21 - Winner</b></div>
+                                    Next Stop:
+                                    <div>27/07/2020 • 07:00</div>
+                                    End Date:
+                                    17/05/2021 • 03:00
+                                    <label><i class="fa fa-angle-up"></i></label>
+                                </div>
+                                <div class="ou-date-content show" id="o1">
+                                    <div class="item">
+                                        <label class="rate">
+                                            <span>Liverpool FC</span>
+                                            <strong>2.00</strong>
+                                        </label>
+                                    </div>
+                                    <div class="item">
+                                        <label class="rate">
+                                            <span>Manchester United</span>
+                                            <strong>2.00</strong>
+                                        </label>
+                                    </div>
+                                    <div class="item">
+                                        <label class="rate">
+                                            <span>Manchester United</span>
+                                            <strong>2.00</strong>
+                                        </label>
+                                    </div>
+                                    <div class="item">
+                                        <label class="rate">
+                                            <span>Manchester United</span>
+                                            <strong>2.00</strong>
+                                        </label>
+                                    </div>
+                                    <div class="ou-all-button">
+                                        <button type="button" class="btn btn-danger">VIEW ALL PARTICIPANTS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div> 
+        </div> 
+    </div>
+</div>
